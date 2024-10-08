@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting</title>
+</head>
+<body>
+    <label for="element">eneter the array</label>
+    <input type="text" name="" id="element" placeholder="enter the array">
+    <input type="button" value="sort" onclick="sortArray()">
+    <p id="result"></p>
+    <script>
+
+        function sortArray(){
+            let elm = document.getElementById('element').value
+            let arr = elm.split(',').map(item=>parseInt(item.trim()))
+            arr.sort(function(a,b){return a-b})
+            document.getElementById('result').innerHTML = arr.join(',')
+           
+        }
+    </script>
+</body>
+</html>
